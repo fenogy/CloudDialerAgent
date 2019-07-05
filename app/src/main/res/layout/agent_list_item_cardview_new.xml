@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:clickable="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        cardview:cardCornerRadius="4dp"
+        cardview:cardElevation="2dp"
+        cardview:cardBackgroundColor="@color/offWhite">
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight=".60"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:text="Agent"
+                        android:layout_width="0dp"
+                        android:layout_weight=".20"
+                        android:textSize="12sp"
+                        android:layout_height="19dp"
+                        android:id="@+id/tvAgent"
+                        cardview:layout_constraintStart_toStartOf="parent"
+                        cardview:layout_constraintTop_toTopOf="parent" android:layout_marginStart="6dp"
+                        android:layout_marginTop="8dp" android:textColor="@color/cardview_dark_background"/>
+                <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight=".80"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/etDialedNumber"
+                        android:hint="Phone"
+                        android:textSize="20sp"
+                        cardview:layout_constraintEnd_toEndOf="parent"
+                        cardview:layout_constraintStart_toEndOf="@+id/tvAgent" android:layout_marginStart="8dp"
+                        android:layout_marginTop="2dp" cardview:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/rounded_rect_bkg" android:layout_marginEnd="2dp"/>
+                <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox"
+                        cardview:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginBottom="4dp" cardview:layout_constraintBottom_toBottomOf="parent"/>
+                <EditText
+                        android:layout_width="67dp"
+                        android:layout_height="32dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etDuration"
+                        android:textSize="13sp" android:hint="Duration"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_rect_bkg"
+                        cardview:layout_constraintBottom_toBottomOf="parent"
+                        cardview:layout_constraintStart_toEndOf="@+id/checkBox" android:layout_marginStart="11dp"
+                        android:layout_marginBottom="2dp"/>
+                <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etRemDuration"
+                        android:layout_marginBottom="8dp"
+                        cardview:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:layout_marginStart="52dp"
+                        android:visibility="invisible" cardview:layout_constraintStart_toEndOf="@+id/etDuration"
+                        android:layout_marginEnd="8dp" cardview:layout_constraintEnd_toEndOf="parent" android:text="2"/>
+                <Switch
+                        android:text="SIM 2 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/switch1" cardview:layout_constraintStart_toEndOf="@+id/etDuration"
+                        android:layout_marginStart="28dp" android:layout_marginBottom="4dp"
+                        cardview:layout_constraintBottom_toBottomOf="parent"
+                        android:textColor="@color/cardview_dark_background" android:layout_marginEnd="8dp"
+                        cardview:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight=".40"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imDial"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1" cardview:srcCompat="@drawable/green" android:padding="4dp"/>
+            <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imCut"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1" cardview:srcCompat="@drawable/red" android:padding="4dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
